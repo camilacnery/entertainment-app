@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { FC } from "react";
 import { TRail } from "../../../domain/Rail";
-import Rail from "../../components/Rail";
+import Rail from "../../general/Rail";
 import styles from "./index.module.scss";
 
 type TProps = {

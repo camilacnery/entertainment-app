@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getHomeRails } from "../../src/api/services/home";
+import { getHomeRails } from "../../src/services/home";
 
 type Data = {
   homeRails: any;

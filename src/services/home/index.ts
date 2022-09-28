@@ -1,4 +1,4 @@
-import { TRail } from "../../../domain/Rail";
+import { TRail } from "../../domain/Rail";
 import tmdbClient from "../../clients/tmdb";
 
 const movieMapper = (result: any) => ({
