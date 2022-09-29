@@ -2,9 +2,9 @@ import { FC } from "react";
 import Head from "next/head";
 import Image from "next/future/image";
 import { IMovie } from "../../../domain/Movie";
-import styles from "./index.module.scss";
 import Rail from "../../general/Rail";
 import Meta from "../../general/Meta";
+import styles from "./index.module.scss";
 
 type TProps = {
   movie: IMovie;
@@ -14,7 +14,10 @@ const MoviePage: FC<TProps> = ({ movie }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <Meta title={movie.title} description={movie.description}></Meta>
+        <Meta
+          title={movie.title}
+          description={movie.description || "Movie details page"}
+        ></Meta>
       </Head>
 
       <main className={styles.main}>

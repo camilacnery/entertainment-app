@@ -1,21 +1,22 @@
-import tmdbClient from "../../clients/tmdb";
+import tmdbClient, { ITMDBMovieDetails } from "../../clients/tmdb";
 import { IMovie } from "../../domain/Movie";
 import { getMovieRecommendationRail } from "../rails";
 
 const getMovie = async (id: string): Promise<IMovie> => {
-  const movie = await tmdbClient.request(`/movie/${id}`);
+  const movie = await tmdbClient.request<ITMDBMovieDetails>(`/movie/${id}`);
+
   const recommendations = await getMovieRecommendationRail(id);
   return {
-    posterUrl: tmdbClient.getImageUrl(movie.poster_path),
-    backdropUrl: tmdbClient.getImageUrl(movie.backdrop_path),
-    title: movie.title || movie.name || null,
-    originalTitle: movie.original_title || null,
-    releaseDate: movie.release_date || null,
-    tagline: movie.tagline || null,
-    description: movie.overview || null,
-    runtime: movie.runtime,
-    genres: movie.genres?.map((genre: any) => genre.name) || [],
-    recommendations,
+    posterUrl: tmdbClient.buildImageUrl(movie.poster_path),
+    backdropUrl: tmdbClient.buildImageUrl(movie.backdrop_path),
+    title: movie.title,
+    ...(movie.original_title && { originalTitle: movie.original_title }),
+    ...(movie.release_date && { releaseDate: movie.release_date }),
+    ...(movie.tagline && { tagline: movie.tagline }),
+    ...(movie.runtime && { runtime: movie.runtime }),
+    ...(movie.overview && { description: movie.overview }),
+    genres: movie.genres?.map((genre) => genre.name) || [],
+    recommendations: recommendations || [],
   };
 };
 

@@ -1,10 +1,10 @@
 import { IRail, IRailItem } from "../../domain/Rail";
-import tmdbClient from "../../clients/tmdb";
+import tmdbClient, { ITMDBList } from "../../clients/tmdb";
 
-const itemMapper = (result: any) => ({
+const itemMapper = (result: ITMDBList["results"][0]) => ({
   id: result.id,
-  posterUrl: tmdbClient.getImageUrl(result.poster_path),
-  title: result.title || result.name || null,
+  posterUrl: tmdbClient.buildImageUrl(result.poster_path),
+  title: result.title || result.name,
 });
 
 const getHomeRails = async (): Promise<IRail[]> => {
@@ -19,7 +19,10 @@ const getHomeRails = async (): Promise<IRail[]> => {
   let homeRails: IRail[] = [];
 
   for (const rail of rails) {
-    const contentList = await tmdbClient.request(rail.path, rail.filter);
+    const contentList = await tmdbClient.request<ITMDBList>(
+      rail.path,
+      rail.filter
+    );
 
     if (contentList.results?.length) {
       homeRails.push({
@@ -35,7 +38,9 @@ const getHomeRails = async (): Promise<IRail[]> => {
 const getMovieRecommendationRail = async (
   movieId: string
 ): Promise<IRailItem[]> => {
-  const rail = await tmdbClient.request(`/movie/${movieId}/recommendations`);
+  const rail = await tmdbClient.request<ITMDBList>(
+    `/movie/${movieId}/recommendations`
+  );
 
   return rail.results?.map(itemMapper);
 };

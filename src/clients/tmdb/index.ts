@@ -1,22 +1,24 @@
 const HOST = "https://api.themoviedb.org/3";
 const IMAGE_PATH = "https://image.tmdb.org/t/p/original";
 
-const request = async (path: string, filter?: string) => {
+const request = async <T>(path: string, filter?: string): Promise<T> => {
   const url = `${HOST}${path}`;
   let params = `api_key=${process.env.TMDB_KEY}`;
 
   if (filter) params += `&${filter}`;
 
-  return fetch(`${url}?${params}`).then((response) => response.json());
+  const response = await fetch(`${url}?${params}`);
+  return (await response.json()) as T;
 };
 
-const getImageUrl = (path: string) => {
+const buildImageUrl = (path: string) => {
   return `${IMAGE_PATH}${path}`;
 };
 
 const tmdbClient = {
   request,
-  getImageUrl,
+  buildImageUrl,
 };
 
+export * from "./types";
 export default tmdbClient;
