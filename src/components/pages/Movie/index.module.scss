@@ -1,9 +1,6 @@
-.container {
-  padding: 0 2rem;
-}
-
 .main {
   min-height: 100vh;
+  padding: 4rem 0 0 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -67,4 +64,8 @@
 
 .content {
   z-index: 2;
+}
+
+.rails {
+  padding-left: 2rem;
 }

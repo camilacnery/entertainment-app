@@ -11,20 +11,16 @@ type TProps = {
 
 const HomePage: FC<TProps> = ({ homeRails }) => {
   return (
-    <div className={styles.container}>
+    <main className={styles.main}>
       <Meta
         title="Movie catalog"
         description="List of movies, movie details, and more"
       />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Movie catalog</h1>
-
-        {homeRails.map((rail) => (
-          <Rail key={`rail-${rail.name}`} {...rail} />
-        ))}
-      </main>
-    </div>
+      {homeRails.map((rail) => (
+        <Rail key={`rail-${rail.name}`} {...rail} />
+      ))}
+    </main>
   );
 };
 

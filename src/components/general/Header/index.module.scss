@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  padding: 3em 4em;
+  align-items: center;
+  background-color: #16213E;
+  height: 8vh;
+  z-index: 3;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  h1 {
+    color: #E94560;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}
