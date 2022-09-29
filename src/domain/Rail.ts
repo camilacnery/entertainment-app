@@ -1,11 +1,10 @@
 export type TRailItem = {
   posterUrl: string;
   title: string;
-  year: number;
+  id: number;
 };
 
 export type TRail = {
   name: string;
-  type: "POSTER";
   items: TRailItem[];
 };

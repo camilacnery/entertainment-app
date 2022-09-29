@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import { getHomeRails } from "../src/services/home";
+import { getHomeRails } from "../src/services/rails";
 import HomePage from "../src/components/pages/Home";
 import { TRail } from "../src/domain/Rail";
 
