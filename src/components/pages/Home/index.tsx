@@ -18,7 +18,7 @@ const HomePage: FC<TProps> = ({ homeRails }) => {
       {bannerUrl && <Banner imageUrl={bannerUrl} />}
       <main className={styles.main}>
         <Meta
-          title="Movie catalog"
+          title="The Catalog"
           description="List of movies, movie details, and more"
         />
 

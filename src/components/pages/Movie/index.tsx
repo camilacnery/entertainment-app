@@ -16,7 +16,7 @@ const MoviePage: FC<TProps> = ({ movie }) => {
       <Banner imageUrl={movie.backdropUrl} />
       <main className={styles.main}>
         <Meta
-          title={`Catalog | ${movie.title}`}
+          title={`The Catalog | ${movie.title}`}
           description={movie.description || "Movie details page"}
         />
 
