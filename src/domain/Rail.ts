@@ -6,6 +6,6 @@ export type TRailItem = {
 
 export type TRail = {
   name: string;
-  type: "LANDSCAPE";
+  type: "POSTER";
   items: TRailItem[];
 };

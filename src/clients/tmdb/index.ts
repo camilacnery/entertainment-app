@@ -1,10 +1,13 @@
 const HOST = "https://api.themoviedb.org/3";
-const IMAGE_PATH = "https://image.tmdb.org/t/p/w500";
+const IMAGE_PATH = "https://image.tmdb.org/t/p/original";
 
-const fetchRequest = async (path: string) => {
-  return fetch(`${HOST}${path}?api_key=${process.env.TMDB_KEY}`).then(
-    (response) => response.json()
-  );
+const request = async (path: string, filter?: string) => {
+  const url = `${HOST}${path}`;
+  let params = `api_key=${process.env.TMDB_KEY}`;
+
+  if (filter) params += `&${filter}`;
+
+  return fetch(`${url}?${params}`).then((response) => response.json());
 };
 
 const getImageUrl = (path: string) => {
@@ -12,7 +15,7 @@ const getImageUrl = (path: string) => {
 };
 
 const tmdbClient = {
-  fetchRequest,
+  request,
   getImageUrl,
 };
 

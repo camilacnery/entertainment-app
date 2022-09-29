@@ -1,20 +1,30 @@
 .rail {
-  color: #FFFFFF;
-  padding: 0 0 6.5vh 4.7vw;
+  padding: 0 0 0 2em ;
+  width: 100vw;
 }
 
 .railList {
   display: flex;
-  align-items: center;
+  gap: 1em;
   overflow-x: scroll;
-  overflow: hidden;
-  padding: 3.3vh 0;
-  height: 38.5vh;
-  position: relative;
+  overflow-y: hidden;
+  padding: 1em;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .railListItem {
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  transition: transform 450ms;
+  cursor: pointer;
+
+  img {
+    max-height: 300px;
+    border-radius: 5px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }

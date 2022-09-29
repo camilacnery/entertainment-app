@@ -7,16 +7,27 @@ const movieMapper = (result: any) => ({
   year: 2022,
 });
 
-const getHomeRails = async (): Promise<TRail[]> => {
-  const trendingMovies = await tmdbClient.fetchRequest("/trending/all/week");
+const rails = [
+  { name: "Trending", path: "/trending/all/week" },
+  { name: "Top Rated", path: "/movie/top_rated" },
+  { name: "Action", path: "/discover/movie", filter: "with_genres=28" },
+  { name: "Comedy", path: "/discover/movie", filter: "with_genres=35" },
+  { name: "Drama", path: "/discover/movie", filter: "with_genres=18" },
+];
 
-  return [
-    {
-      name: "Trending",
-      type: "LANDSCAPE",
-      items: trendingMovies.results.map(movieMapper),
-    },
-  ];
+const getHomeRails = async (): Promise<TRail[]> => {
+  let homeRails: TRail[] = [];
+
+  for (const rail of rails) {
+    const contentList = await tmdbClient.request(rail.path, rail.filter);
+    homeRails.push({
+      name: rail.name,
+      type: "POSTER",
+      items: contentList.results.map(movieMapper),
+    });
+  }
+
+  return homeRails;
 };
 
 export { getHomeRails };
