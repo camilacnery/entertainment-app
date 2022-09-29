@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import { getHomeRails } from "../src/services/rails";
 import HomePage from "../src/components/pages/Home";
-import { TRail } from "../src/domain/Rail";
+import { IRail } from "../src/domain/Rail";
 
-const Home: NextPage<{ homeRails: TRail[] }> = (props) => (
+const Home: NextPage<{ homeRails: IRail[] }> = (props) => (
   <HomePage {...props} />
 );
 

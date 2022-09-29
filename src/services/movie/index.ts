@@ -1,8 +1,8 @@
 import tmdbClient from "../../clients/tmdb";
-import { TMovie } from "../../domain/Movie";
+import { IMovie } from "../../domain/Movie";
 import { getMovieRecommendationRail } from "../rails";
 
-const getMovie = async (id: string): Promise<TMovie> => {
+const getMovie = async (id: string): Promise<IMovie> => {
   const movie = await tmdbClient.request(`/movie/${id}`);
   const recommendations = await getMovieRecommendationRail(id);
   return {
@@ -13,6 +13,7 @@ const getMovie = async (id: string): Promise<TMovie> => {
     releaseDate: movie.release_date || null,
     tagline: movie.tagline || null,
     description: movie.overview || null,
+    runtime: movie.runtime,
     genres: movie.genres?.map((genre: any) => genre.name) || [],
     recommendations,
   };

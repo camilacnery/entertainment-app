@@ -1,10 +1,10 @@
 import { FC } from "react";
 import Link from "next/link";
 import Image from "next/future/image";
-import { TRail } from "../../../domain/Rail";
+import { IRail } from "../../../domain/Rail";
 import styles from "./index.module.scss";
 
-const Rail: FC<TRail> = ({ name, items }) => {
+const Rail: FC<IRail> = ({ name, items }) => {
   return (
     <section className={styles.rail}>
       <h1>{name}</h1>

@@ -1,4 +1,4 @@
-import { TRail, TRailItem } from "../../domain/Rail";
+import { IRail, IRailItem } from "../../domain/Rail";
 import tmdbClient from "../../clients/tmdb";
 
 const itemMapper = (result: any) => ({
@@ -7,7 +7,7 @@ const itemMapper = (result: any) => ({
   title: result.title || result.name || null,
 });
 
-const getHomeRails = async (): Promise<TRail[]> => {
+const getHomeRails = async (): Promise<IRail[]> => {
   const rails = [
     { name: "Trending", path: "/trending/movie/week" },
     { name: "Top Rated", path: "/movie/top_rated" },
@@ -16,7 +16,7 @@ const getHomeRails = async (): Promise<TRail[]> => {
     { name: "Drama", path: "/discover/movie", filter: "with_genres=18" },
   ];
 
-  let homeRails: TRail[] = [];
+  let homeRails: IRail[] = [];
 
   for (const rail of rails) {
     const contentList = await tmdbClient.request(rail.path, rail.filter);
@@ -34,7 +34,7 @@ const getHomeRails = async (): Promise<TRail[]> => {
 
 const getMovieRecommendationRail = async (
   movieId: string
-): Promise<TRailItem[]> => {
+): Promise<IRailItem[]> => {
   const rail = await tmdbClient.request(`/movie/${movieId}/recommendations`);
 
   return rail.results?.map(itemMapper);

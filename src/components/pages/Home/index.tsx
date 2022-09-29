@@ -1,20 +1,22 @@
 import Head from "next/head";
 import { FC } from "react";
-import { TRail } from "../../../domain/Rail";
+import { IRail } from "../../../domain/Rail";
+import Meta from "../../general/Meta";
 import Rail from "../../general/Rail";
 import styles from "./index.module.scss";
 
 type TProps = {
-  homeRails: TRail[];
+  homeRails: IRail[];
 };
 
 const HomePage: FC<TProps> = ({ homeRails }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Movie catalog</title>
-        <meta name="description" content="Movie catalog" />
-        <link rel="icon" href="/favicon.ico" />
+        <Meta
+          title="Movie catalog"
+          description="List of movies, movie details, and more"
+        ></Meta>
       </Head>
 
       <main className={styles.main}>

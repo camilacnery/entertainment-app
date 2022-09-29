@@ -1,6 +1,6 @@
-import { TRailItem } from "./Rail";
+import { IRailItem } from "./Rail";
 
-export type TMovie = {
+export interface IMovie {
   posterUrl: string;
   backdropUrl: string;
   title: string;
@@ -9,5 +9,6 @@ export type TMovie = {
   tagline: string;
   description: string;
   genres: string[];
-  recommendations: TRailItem[];
-};
+  recommendations: IRailItem[];
+  runtime: number;
+}
