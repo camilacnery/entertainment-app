@@ -12,12 +12,10 @@ type TProps = {
 const HomePage: FC<TProps> = ({ homeRails }) => {
   return (
     <div className={styles.container}>
-      <Head>
-        <Meta
-          title="Movie catalog"
-          description="List of movies, movie details, and more"
-        ></Meta>
-      </Head>
+      <Meta
+        title="Movie catalog"
+        description="List of movies, movie details, and more"
+      />
 
       <main className={styles.main}>
         <h1 className={styles.title}>Movie catalog</h1>

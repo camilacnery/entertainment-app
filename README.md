@@ -28,6 +28,8 @@ This is a code in progress, still missing important things like:
 
 - Placeholder for images while they are loading / when they are not available
 - Tests
+- Error handling
+- Client side caching
 - Responsiveness
 - Favicon
 
