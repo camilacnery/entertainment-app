@@ -1,31 +1,52 @@
 import { FC } from "react";
 import Head from "next/head";
-import Image from "next/image";
-import { TMovie } from "../../../domain/Movie";
+import Image from "next/future/image";
+import { IMovie } from "../../../domain/Movie";
 import styles from "./index.module.scss";
 import Rail from "../../general/Rail";
+import Meta from "../../general/Meta";
 
 type TProps = {
-  movie: TMovie;
+  movie: IMovie;
 };
 
 const MoviePage: FC<TProps> = ({ movie }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{movie.title}</title>
-        <meta name="description" content="Movie catalog" />
-        <link rel="icon" href="/favicon.ico" />
+        <Meta title={movie.title} description={movie.description}></Meta>
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>{movie.title}</h1>
         <div className={styles.banner}>
-          <img src={movie.backdropUrl} alt={`Imagem ${movie.title}`} />
+          <Image
+            src={movie.backdropUrl}
+            alt={`Imagem ${movie.title}`}
+            width={800}
+            height={600}
+          />
         </div>
 
         <div className={styles.content}>
-          <Rail name="Recommendations" items={movie.recommendations} />
+          <div className={styles.movie}>
+            <Image
+              loading="lazy"
+              width={300}
+              height={380}
+              src={movie.posterUrl}
+              alt={`Movie poster for ${movie.title}`}
+            />
+            <section className={styles.movieDetails}>
+              <h1 className={styles.title}>{movie.title}</h1>
+              <p>{`${movie.releaseDate} • ${movie.genres.join(", ")} • ${
+                movie.runtime
+              }min`}</p>
+              <p>{movie.tagline}</p>
+              <h2>Overview</h2>
+              <p>{movie.description}</p>
+            </section>
+          </div>
+          <Rail name="Similar content" items={movie.recommendations} />
         </div>
       </main>
     </div>
