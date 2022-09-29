@@ -20,11 +20,14 @@ const getHomeRails = async (): Promise<TRail[]> => {
 
   for (const rail of rails) {
     const contentList = await tmdbClient.request(rail.path, rail.filter);
-    homeRails.push({
-      name: rail.name,
-      type: "POSTER",
-      items: contentList.results.map(movieMapper),
-    });
+
+    if (contentList.results?.length) {
+      homeRails.push({
+        name: rail.name,
+        type: "POSTER",
+        items: contentList.results.map(movieMapper),
+      });
+    }
   }
 
   return homeRails;
