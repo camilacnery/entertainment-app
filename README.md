@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deploy
 
-This application is currently being deployed to Vercel, and is available here: [cnery-entertainment-app.vercel.app](cnery-entertainment-app.vercel.app)
+This application is currently being deployed to Vercel, and is available here: [cnery-entertainment-app.vercel.app](https://cnery-entertainment-app.vercel.app)
 
 ## To Do
 
