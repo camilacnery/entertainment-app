@@ -4,6 +4,7 @@ import { IMovie } from "../../../domain/Movie";
 import Rail from "../../general/Rail";
 import Meta from "../../general/Meta";
 import styles from "./index.module.scss";
+import Banner from "../../general/Banner";
 
 type TProps = {
   movie: IMovie;
@@ -11,45 +12,39 @@ type TProps = {
 
 const MoviePage: FC<TProps> = ({ movie }) => {
   return (
-    <main className={styles.main}>
-      <Meta
-        title={`Catalog | ${movie.title}`}
-        description={movie.description || "Movie details page"}
-      />
-
-      <div className={styles.banner}>
-        <Image
-          src={movie.backdropUrl}
-          alt={`Imagem ${movie.title}`}
-          width={1024}
-          height={768}
+    <>
+      <Banner imageUrl={movie.backdropUrl} />
+      <main className={styles.main}>
+        <Meta
+          title={`Catalog | ${movie.title}`}
+          description={movie.description || "Movie details page"}
         />
-      </div>
 
-      <div className={styles.content}>
-        <div className={styles.movie}>
-          <Image
-            loading="lazy"
-            width={300}
-            height={380}
-            src={movie.posterUrl}
-            alt={`Movie poster for ${movie.title}`}
-          />
-          <section className={styles.movieDetails}>
-            <h1 className={styles.title}>{movie.title}</h1>
-            <p>{`${movie.releaseDate} • ${movie.genres.join(", ")} • ${
-              movie.runtime
-            }min`}</p>
-            <p>{movie.tagline}</p>
-            <h2>Overview</h2>
-            <p>{movie.description}</p>
-          </section>
+        <div className={styles.content}>
+          <div className={styles.movie}>
+            <Image
+              loading="lazy"
+              width={300}
+              height={380}
+              src={movie.posterUrl}
+              alt={`Movie poster for ${movie.title}`}
+            />
+            <section className={styles.movieDetails}>
+              <h1 className={styles.title}>{movie.title}</h1>
+              <p>{`${movie.releaseDate} • ${movie.genres.join(", ")} • ${
+                movie.runtime
+              }min`}</p>
+              <p>{movie.tagline}</p>
+              <h2>Overview</h2>
+              <p>{movie.description}</p>
+            </section>
+          </div>
+          <div className={styles.rails}>
+            <Rail name="Similar content" items={movie.recommendations} />
+          </div>
         </div>
-        <div className={styles.rails}>
-          <Rail name="Similar content" items={movie.recommendations} />
-        </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 };
 

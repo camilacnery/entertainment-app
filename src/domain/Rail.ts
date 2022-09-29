@@ -1,5 +1,6 @@
 export interface IRailItem {
   posterUrl: string;
+  backdropUrl: string;
   title: string;
   id: number;
 }

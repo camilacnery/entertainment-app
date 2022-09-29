@@ -4,6 +4,7 @@ import tmdbClient, { ITMDBList } from "../../clients/tmdb";
 const itemMapper = (result: ITMDBList["results"][0]) => ({
   id: result.id,
   posterUrl: tmdbClient.buildImageUrl(result.poster_path),
+  backdropUrl: tmdbClient.buildImageUrl(result.backdrop_path),
   title: result.title || result.name,
 });
 
