@@ -17,7 +17,7 @@ const MoviePage: FC<TProps> = ({ movie }) => {
       <main className={styles.main}>
         <Meta
           title={`The Catalog | ${movie.title}`}
-          description={movie.description || "Movie details page"}
+          description={`Movie description - ${movie.description}`}
         />
 
         <div className={styles.content}>
@@ -31,7 +31,7 @@ const MoviePage: FC<TProps> = ({ movie }) => {
               <p>{movie.description}</p>
             </section>
           </div>
-          <Rail name="Similar content" items={movie.recommendations} />
+          <Rail name="Similar movies" items={movie.recommendations} />
         </div>
       </main>
     </>

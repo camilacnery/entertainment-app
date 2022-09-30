@@ -27,7 +27,9 @@ const items: IRailItem[] = [
   },
 ];
 
+export const buildRailItems = ({ size }: { size: number }): IRailItem[] => items.slice(0, size);
+
 export const buildRail = ({ name, size }: { name: string; size: number }): IRail => ({
   name,
-  items: items.slice(0, size),
+  items: buildRailItems({ size }),
 });

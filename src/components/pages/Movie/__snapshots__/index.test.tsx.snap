@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie renders movie details with all content 1`] = `
+<body>
+  <div>
+    <div
+      class="banner"
+    >
+      <img
+        alt=""
+        data-nimg="future"
+        decoding="async"
+        height="768"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fmovie.1.backdrop&w=2048&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fmovie.1.backdrop&w=1080&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.1.backdrop&w=2048&q=75 2x"
+        style="color: transparent;"
+        width="1024"
+      />
+    </div>
+    <main
+      class="main"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="movie"
+        >
+          <img
+            alt=""
+            data-nimg="future"
+            decoding="async"
+            height="380"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fmovie.poster&w=640&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fmovie.poster&w=384&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.poster&w=640&q=75 2x"
+            style="color: transparent;"
+            width="300"
+          />
+          <section
+            class="movieDetails"
+          >
+            <h1
+              class="title"
+            >
+              Movie Title
+            </h1>
+            <p>
+              2022-09-16 • Action, Drama • 167min
+            </p>
+            <p>
+              Movie tagline
+            </p>
+            <h2>
+              Overview
+            </h2>
+            <p>
+              Movie description
+            </p>
+          </section>
+        </div>
+        <section
+          class="rail"
+        >
+          <h1
+            id="rail-heading-Similarmovies"
+          >
+            Similar movies
+          </h1>
+          <ul
+            aria-labelledby="rail-heading-Similarmovies"
+            class="railList"
+          >
+            <li
+              class="railListItem"
+            >
+              <img
+                alt="First Movie"
+                data-nimg="future"
+                decoding="async"
+                height="280"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fmovie.1.poster&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fmovie.1.poster&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.1.poster&w=640&q=75 2x"
+                style="color: transparent;"
+                width="200"
+              />
+            </li>
+            <li
+              class="railListItem"
+            >
+              <img
+                alt="Second Movie"
+                data-nimg="future"
+                decoding="async"
+                height="280"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fmovie.2.poster&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fmovie.2.poster&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.2.poster&w=640&q=75 2x"
+                style="color: transparent;"
+                width="200"
+              />
+            </li>
+            <li
+              class="railListItem"
+            >
+              <img
+                alt="Third Movie"
+                data-nimg="future"
+                decoding="async"
+                height="280"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fmovie.3.poster&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fmovie.3.poster&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.3.poster&w=640&q=75 2x"
+                style="color: transparent;"
+                width="200"
+              />
+            </li>
+            <li
+              class="railListItem"
+            >
+              <img
+                alt="Fourth Movie"
+                data-nimg="future"
+                decoding="async"
+                height="280"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fmovie.4.poster&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fmovie.4.poster&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.4.poster&w=640&q=75 2x"
+                style="color: transparent;"
+                width="200"
+              />
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+`;

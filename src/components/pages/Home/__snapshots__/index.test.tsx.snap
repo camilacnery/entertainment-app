@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders home with multiple rails 1`] = `
+<body>
+  <div>
+    <div
+      class="banner"
+    >
+      <img
+        alt=""
+        data-nimg="future"
+        decoding="async"
+        height="768"
+        loading="lazy"
+        src="/_next/image?url=https%3A%2F%2Fmovie.1.backdrop&w=2048&q=75"
+        srcset="/_next/image?url=https%3A%2F%2Fmovie.1.backdrop&w=1080&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.1.backdrop&w=2048&q=75 2x"
+        style="color: transparent;"
+        width="1024"
+      />
+    </div>
+    <main
+      class="main"
+    >
+      <div
+        class="rails"
+      >
+        <section
+          class="rail"
+        >
+          <h1
+            id="rail-heading-Trending"
+          >
+            Trending
+          </h1>
+          <ul
+            aria-labelledby="rail-heading-Trending"
+            class="railList"
+          >
+            <li
+              class="railListItem"
+            >
+              <img
+                alt="First Movie"
+                data-nimg="future"
+                decoding="async"
+                height="280"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fmovie.1.poster&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fmovie.1.poster&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.1.poster&w=640&q=75 2x"
+                style="color: transparent;"
+                width="200"
+              />
+            </li>
+            <li
+              class="railListItem"
+            >
+              <img
+                alt="Second Movie"
+                data-nimg="future"
+                decoding="async"
+                height="280"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fmovie.2.poster&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fmovie.2.poster&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.2.poster&w=640&q=75 2x"
+                style="color: transparent;"
+                width="200"
+              />
+            </li>
+          </ul>
+        </section>
+        <section
+          class="rail"
+        >
+          <h1
+            id="rail-heading-TopRated"
+          >
+            Top Rated
+          </h1>
+          <ul
+            aria-labelledby="rail-heading-TopRated"
+            class="railList"
+          >
+            <li
+              class="railListItem"
+            >
+              <img
+                alt="First Movie"
+                data-nimg="future"
+                decoding="async"
+                height="280"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fmovie.1.poster&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fmovie.1.poster&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.1.poster&w=640&q=75 2x"
+                style="color: transparent;"
+                width="200"
+              />
+            </li>
+            <li
+              class="railListItem"
+            >
+              <img
+                alt="Second Movie"
+                data-nimg="future"
+                decoding="async"
+                height="280"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fmovie.2.poster&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fmovie.2.poster&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.2.poster&w=640&q=75 2x"
+                style="color: transparent;"
+                width="200"
+              />
+            </li>
+            <li
+              class="railListItem"
+            >
+              <img
+                alt="Third Movie"
+                data-nimg="future"
+                decoding="async"
+                height="280"
+                loading="lazy"
+                src="/_next/image?url=https%3A%2F%2Fmovie.3.poster&w=640&q=75"
+                srcset="/_next/image?url=https%3A%2F%2Fmovie.3.poster&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fmovie.3.poster&w=640&q=75 2x"
+                style="color: transparent;"
+                width="200"
+              />
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+`;

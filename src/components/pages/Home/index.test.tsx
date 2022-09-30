@@ -4,12 +4,14 @@ import { buildRail } from "@/tests/builders/rails";
 import Home from ".";
 
 const pageElements = {
-  rail: (name: string) => screen.queryByRole("list", { name }),
-  railItems: (rail: HTMLElement) => within(rail).getAllByRole("listitem"),
-  railMovie: (rail: HTMLElement, movieName: string) =>
-    within(rail).queryByRole("img", {
-      name: movieName,
-    }),
+  rail: {
+    list: (name: string) => screen.queryByRole("list", { name }),
+    items: (rail: HTMLElement) => within(rail).getAllByRole("listitem"),
+    movie: (rail: HTMLElement, movieName: string) =>
+      within(rail).queryByRole("img", {
+        name: movieName,
+      }),
+  },
 };
 
 const renderHome = (rails: IRail[]) => {
@@ -23,18 +25,20 @@ describe("Home", () => {
       buildRail({ name: "Top Rated", size: 3 }),
     ];
 
-    renderHome(rails);
+    const { baseElement } = renderHome(rails);
 
-    const trendingRail = pageElements.rail("Trending")!;
-    expect(pageElements.railItems(trendingRail)).toHaveLength(2);
-    expect(pageElements.railMovie(trendingRail, "First Movie")).toBeInTheDocument();
-    expect(pageElements.railMovie(trendingRail, "Second Movie")).toBeInTheDocument();
+    expect(baseElement).toMatchSnapshot();
 
-    const topRatedRail = pageElements.rail("Top Rated")!;
-    expect(pageElements.railItems(topRatedRail)).toHaveLength(3);
-    expect(pageElements.railMovie(topRatedRail, "First Movie")).toBeInTheDocument();
-    expect(pageElements.railMovie(topRatedRail, "Second Movie")).toBeInTheDocument();
-    expect(pageElements.railMovie(topRatedRail, "Third Movie")).toBeInTheDocument();
+    const trendingRail = pageElements.rail.list("Trending")!;
+    expect(pageElements.rail.items(trendingRail)).toHaveLength(2);
+    expect(pageElements.rail.movie(trendingRail, "First Movie")).toBeInTheDocument();
+    expect(pageElements.rail.movie(trendingRail, "Second Movie")).toBeInTheDocument();
+
+    const topRatedRail = pageElements.rail.list("Top Rated")!;
+    expect(pageElements.rail.items(topRatedRail)).toHaveLength(3);
+    expect(pageElements.rail.movie(topRatedRail, "First Movie")).toBeInTheDocument();
+    expect(pageElements.rail.movie(topRatedRail, "Second Movie")).toBeInTheDocument();
+    expect(pageElements.rail.movie(topRatedRail, "Third Movie")).toBeInTheDocument();
   });
 
   it("does not render rails with empty items", () => {
@@ -45,7 +49,7 @@ describe("Home", () => {
 
     renderHome(rails);
 
-    expect(pageElements.rail("Trending")).not.toBeInTheDocument();
-    expect(pageElements.rail("Top Rated")).toBeInTheDocument();
+    expect(pageElements.rail.list("Trending")).not.toBeInTheDocument();
+    expect(pageElements.rail.list("Top Rated")).toBeInTheDocument();
   });
 });
