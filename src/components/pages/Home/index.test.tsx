@@ -18,7 +18,10 @@ const renderHome = (rails: IRail[]) => {
 
 describe("Home", () => {
   it("renders home with multiple rails", () => {
-    const rails = [buildRail("Trending", 2), buildRail("Top Rated", 3)];
+    const rails = [
+      buildRail({ name: "Trending", size: 2 }),
+      buildRail({ name: "Top Rated", size: 3 }),
+    ];
 
     renderHome(rails);
 
@@ -35,7 +38,10 @@ describe("Home", () => {
   });
 
   it("does not render rails with empty items", () => {
-    const rails = [buildRail("Trending", 0), buildRail("Top Rated", 3)];
+    const rails = [
+      buildRail({ name: "Trending", size: 0 }),
+      buildRail({ name: "Top Rated", size: 3 }),
+    ];
 
     renderHome(rails);
 
