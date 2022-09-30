@@ -28,6 +28,7 @@ describe("Movie", () => {
     const movie = buildMovie();
     const { baseElement } = renderMovie(movie);
 
+    // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
     const recommendations = pageElements.rail.list("Similar movies")!;
 
     expect(baseElement).toMatchSnapshot();

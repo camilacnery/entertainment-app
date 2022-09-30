@@ -5,7 +5,7 @@ const itemMapper = (result: ITMDBList["results"][0]) => ({
   id: result.id,
   posterUrl: tmdbClient.buildImageUrl(result.poster_path),
   backdropUrl: tmdbClient.buildImageUrl(result.backdrop_path),
-  title: result.title || result.name,
+  title: result.name || result.title,
 });
 
 const getHomeRails = async (): Promise<IRail[]> => {
@@ -17,7 +17,7 @@ const getHomeRails = async (): Promise<IRail[]> => {
     { name: "Drama", path: "/discover/movie", filter: "with_genres=18" },
   ];
 
-  let homeRails: IRail[] = [];
+  const homeRails: IRail[] = [];
 
   for (const rail of rails) {
     const contentList = await tmdbClient.request<ITMDBList>(rail.path, rail.filter);

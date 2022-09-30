@@ -29,11 +29,13 @@ describe("Home", () => {
 
     expect(baseElement).toMatchSnapshot();
 
+    // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
     const trendingRail = pageElements.rail.list("Trending")!;
     expect(pageElements.rail.items(trendingRail)).toHaveLength(2);
     expect(pageElements.rail.movie(trendingRail, "First Movie")).toBeInTheDocument();
     expect(pageElements.rail.movie(trendingRail, "Second Movie")).toBeInTheDocument();
 
+    // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
     const topRatedRail = pageElements.rail.list("Top Rated")!;
     expect(pageElements.rail.items(topRatedRail)).toHaveLength(3);
     expect(pageElements.rail.movie(topRatedRail, "First Movie")).toBeInTheDocument();
