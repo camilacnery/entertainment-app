@@ -27,7 +27,7 @@ const MoviePage: FC<TProps> = ({ movie }) => {
               width={300}
               height={380}
               src={movie.posterUrl}
-              alt={`Movie poster for ${movie.title}`}
+              alt={""}
             />
             <section className={styles.movieDetails}>
               <h1 className={styles.title}>{movie.title}</h1>

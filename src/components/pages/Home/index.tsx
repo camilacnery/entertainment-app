@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import { IRail } from "../../../domain/Rail";
 import Banner from "../../general/Banner";
 import Meta from "../../general/Meta";
@@ -10,21 +10,17 @@ type TProps = {
 };
 
 const HomePage: FC<TProps> = ({ homeRails }) => {
-  const bannerUrl = homeRails[0].items[0].backdropUrl;
+  const bannerUrl = homeRails[0]?.items[0]?.backdropUrl;
 
-  console.log(homeRails[0].items[0]);
   return (
     <>
       {bannerUrl && <Banner imageUrl={bannerUrl} />}
       <main className={styles.main}>
-        <Meta
-          title="The Catalog"
-          description="List of movies, movie details, and more"
-        />
+        <Meta title="The Catalog" description="List of movies, movie details, and more" />
 
         <div className={styles.rails}>
           {homeRails.map((rail) => (
-            <Rail key={`rail-${rail.name}`} {...rail} />
+            <Fragment key={`rail-${rail.name}`}>{!!rail.items?.length && <Rail {...rail} />}</Fragment>
           ))}
         </div>
       </main>
