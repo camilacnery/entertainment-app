@@ -1,4 +1,4 @@
-import { IRail, IRailItem } from "../../domain/Rail";
+import { IRail, IRailItem } from "@/domain/Rail";
 
 const items: IRailItem[] = [
   {

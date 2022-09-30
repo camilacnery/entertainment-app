@@ -1,7 +1,7 @@
 import { screen, render, within } from "@testing-library/react";
-import Home from "../../../../pages";
-import { IRail } from "../../../domain/Rail";
-import { buildRail } from "../../../tests/builders/rails";
+import { IRail } from "@/domain/Rail";
+import { buildRail } from "@/tests/builders/rails";
+import Home from ".";
 
 const pageElements = {
   rail: (name: string) => screen.queryByRole("list", { name }),

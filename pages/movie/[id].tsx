@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from "next";
-import MoviePage from "../../src/components/pages/Movie";
-import { IMovie } from "../../src/domain/Movie";
-import { getMovie } from "../../src/services/movie";
+import MoviePage from "@/components/pages/Movie";
+import { IMovie } from "@/domain/Movie";
+import { getMovie } from "@/services/movie";
 
 const Movie: NextPage<{ movie: IMovie }> = (props) => <MoviePage {...props} />;
 

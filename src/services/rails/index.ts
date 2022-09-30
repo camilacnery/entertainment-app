@@ -1,5 +1,5 @@
-import { IRail, IRailItem } from "../../domain/Rail";
-import tmdbClient, { ITMDBList } from "../../clients/tmdb";
+import { IRail, IRailItem } from "@/domain/Rail";
+import tmdbClient, { ITMDBList } from "@/clients/tmdb";
 
 const itemMapper = (result: ITMDBList["results"][0]) => ({
   id: result.id,
@@ -20,10 +20,7 @@ const getHomeRails = async (): Promise<IRail[]> => {
   let homeRails: IRail[] = [];
 
   for (const rail of rails) {
-    const contentList = await tmdbClient.request<ITMDBList>(
-      rail.path,
-      rail.filter
-    );
+    const contentList = await tmdbClient.request<ITMDBList>(rail.path, rail.filter);
 
     if (contentList.results?.length) {
       homeRails.push({
@@ -36,12 +33,8 @@ const getHomeRails = async (): Promise<IRail[]> => {
   return homeRails;
 };
 
-const getMovieRecommendationRail = async (
-  movieId: string
-): Promise<IRailItem[]> => {
-  const rail = await tmdbClient.request<ITMDBList>(
-    `/movie/${movieId}/recommendations`
-  );
+const getMovieRecommendationRail = async (movieId: string): Promise<IRailItem[]> => {
+  const rail = await tmdbClient.request<ITMDBList>(`/movie/${movieId}/recommendations`);
 
   return rail.results?.map(itemMapper);
 };

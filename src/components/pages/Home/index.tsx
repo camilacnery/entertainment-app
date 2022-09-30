@@ -1,8 +1,8 @@
 import { FC, Fragment } from "react";
-import { IRail } from "../../../domain/Rail";
-import Banner from "../../general/Banner";
-import Meta from "../../general/Meta";
-import Rail from "../../general/Rail";
+import { IRail } from "@/domain/Rail";
+import Banner from "@/components/general/Banner";
+import Meta from "@/components/general/Meta";
+import Rail from "@/components/general/Rail";
 import styles from "./index.module.scss";
 
 type TProps = {
@@ -20,7 +20,9 @@ const HomePage: FC<TProps> = ({ homeRails }) => {
 
         <div className={styles.rails}>
           {homeRails.map((rail) => (
-            <Fragment key={`rail-${rail.name}`}>{!!rail.items?.length && <Rail {...rail} />}</Fragment>
+            <Fragment key={`rail-${rail.name}`}>
+              {!!rail.items?.length && <Rail {...rail} />}
+            </Fragment>
           ))}
         </div>
       </main>

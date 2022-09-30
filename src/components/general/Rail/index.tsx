@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Link from "next/link";
 import Image from "next/future/image";
-import { IRail } from "../../../domain/Rail";
+import { IRail } from "@/domain/Rail";
 import styles from "./index.module.scss";
 
 const Rail: FC<IRail> = ({ name, items }) => {
@@ -13,7 +13,13 @@ const Rail: FC<IRail> = ({ name, items }) => {
         {items.map((item) => (
           <Link key={`rail-item-${item.title}`} href={`/movie/${item.id}`}>
             <li className={styles.railListItem}>
-              <Image loading="lazy" width={200} height={280} src={item.posterUrl} alt={item.title} />
+              <Image
+                loading="lazy"
+                width={200}
+                height={280}
+                src={item.posterUrl}
+                alt={item.title}
+              />
             </li>
           </Link>
         ))}

@@ -1,6 +1,6 @@
-import tmdbClient, { ITMDBMovieDetails } from "../../clients/tmdb";
-import { IMovie } from "../../domain/Movie";
-import { getMovieRecommendationRail } from "../rails";
+import tmdbClient, { ITMDBMovieDetails } from "@/clients/tmdb";
+import { IMovie } from "@/domain/Movie";
+import { getMovieRecommendationRail } from "@/services/rails";
 
 const getMovie = async (id: string): Promise<IMovie> => {
   const movie = await tmdbClient.request<ITMDBMovieDetails>(`/movie/${id}`);

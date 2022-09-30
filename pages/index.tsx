@@ -1,11 +1,9 @@
 import type { NextPage } from "next";
-import { getHomeRails } from "../src/services/rails";
-import HomePage from "../src/components/pages/Home";
-import { IRail } from "../src/domain/Rail";
+import { getHomeRails } from "@/services/rails";
+import HomePage from "@/components/pages/Home";
+import { IRail } from "@/domain/Rail";
 
-const Home: NextPage<{ homeRails: IRail[] }> = (props) => (
-  <HomePage {...props} />
-);
+const Home: NextPage<{ homeRails: IRail[] }> = (props) => <HomePage {...props} />;
 
 export async function getStaticProps() {
   const homeRails = await getHomeRails();
