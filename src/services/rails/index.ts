@@ -36,7 +36,7 @@ const getHomeRails = async (): Promise<IRail[]> => {
 const getMovieRecommendationRail = async (movieId: string): Promise<IRailItem[]> => {
   const rail = await tmdbClient.request<ITMDBList>(`/movie/${movieId}/recommendations`);
 
-  return rail.results?.map(itemMapper);
+  return rail.results?.map(itemMapper) || [];
 };
 
 export { getHomeRails, getMovieRecommendationRail };

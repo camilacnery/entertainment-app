@@ -32,15 +32,15 @@ describe("Home", () => {
     // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
     const trendingRail = pageElements.rail.list("Trending")!;
     expect(pageElements.rail.items(trendingRail)).toHaveLength(2);
-    expect(pageElements.rail.movie(trendingRail, "First Movie")).toBeInTheDocument();
-    expect(pageElements.rail.movie(trendingRail, "Second Movie")).toBeInTheDocument();
+    expect(pageElements.rail.movie(trendingRail, "Schindler's List")).toBeInTheDocument();
+    expect(pageElements.rail.movie(trendingRail, "The Godfather")).toBeInTheDocument();
 
     // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
     const topRatedRail = pageElements.rail.list("Top Rated")!;
     expect(pageElements.rail.items(topRatedRail)).toHaveLength(3);
-    expect(pageElements.rail.movie(topRatedRail, "First Movie")).toBeInTheDocument();
-    expect(pageElements.rail.movie(topRatedRail, "Second Movie")).toBeInTheDocument();
-    expect(pageElements.rail.movie(topRatedRail, "Third Movie")).toBeInTheDocument();
+    expect(pageElements.rail.movie(topRatedRail, "Schindler's List")).toBeInTheDocument();
+    expect(pageElements.rail.movie(topRatedRail, "The Godfather")).toBeInTheDocument();
+    expect(pageElements.rail.movie(topRatedRail, "Pulp Fiction")).toBeInTheDocument();
   });
 
   it("does not render rails with empty items", () => {

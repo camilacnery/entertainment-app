@@ -14,8 +14,8 @@ const pageElements = {
     releaseDate: (date: string) => screen.getByText(new RegExp(date)),
     genres: (genres: string) => screen.getByText(new RegExp(genres)),
     duration: (duration: string) => screen.getByText(new RegExp(duration)),
-    tagline: (tagline: string) => screen.getByText(tagline),
-    description: (description: string) => screen.getByText(description),
+    tagline: (tagline: RegExp) => screen.getByText(tagline),
+    description: (description: RegExp) => screen.getByText(description),
   },
 };
 
@@ -33,12 +33,12 @@ describe("Movie", () => {
 
     expect(baseElement).toMatchSnapshot();
 
-    expect(pageElements.movieDetails.title("Movie Title")).toBeInTheDocument();
-    expect(pageElements.movieDetails.releaseDate("2022-09-16")).toBeInTheDocument();
-    expect(pageElements.movieDetails.genres("Action, Drama")).toBeInTheDocument();
-    expect(pageElements.movieDetails.duration("167min")).toBeInTheDocument();
-    expect(pageElements.movieDetails.tagline("Movie tagline")).toBeInTheDocument();
-    expect(pageElements.movieDetails.tagline("Movie description")).toBeInTheDocument();
-    expect(pageElements.rail.items(recommendations)).toHaveLength(4);
+    expect(pageElements.movieDetails.title("The Shawshank Redemption")).toBeInTheDocument();
+    expect(pageElements.movieDetails.releaseDate("1994-09-23")).toBeInTheDocument();
+    expect(pageElements.movieDetails.genres("Drama, Crime")).toBeInTheDocument();
+    expect(pageElements.movieDetails.duration("142min")).toBeInTheDocument();
+    expect(pageElements.movieDetails.tagline(/hope can set you free/i)).toBeInTheDocument();
+    expect(pageElements.movieDetails.description(/framed in the 1940s/i)).toBeInTheDocument();
+    expect(pageElements.rail.items(recommendations)).toHaveLength(5);
   });
 });

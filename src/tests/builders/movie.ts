@@ -2,16 +2,17 @@ import { IMovie } from "@/domain/Movie";
 import { buildRailItems } from "./rails";
 
 const movie: IMovie = {
-  posterUrl: "https://movie.poster",
-  backdropUrl: "https://movie.1.backdrop",
-  title: "Movie Title",
-  originalTitle: "Título do filme",
-  releaseDate: "2022-09-16",
-  tagline: "Movie tagline",
-  description: "Movie description",
-  runtime: 167,
-  genres: ["Action", "Drama"],
-  recommendations: buildRailItems({ size: 4 }),
+  posterUrl: "https://image.tmdb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+  backdropUrl: "https://image.tmdb.org/t/p/original/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg",
+  title: "The Shawshank Redemption",
+  originalTitle: "The Shawshank Redemption",
+  releaseDate: "1994-09-23",
+  tagline: "Fear can hold you prisoner. Hope can set you free.",
+  runtime: 142,
+  description:
+    "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.",
+  genres: ["Drama", "Crime"],
+  recommendations: buildRailItems({ size: 5 }),
 };
 
 export const buildMovie = (props: Partial<IMovie> = {}): IMovie => ({

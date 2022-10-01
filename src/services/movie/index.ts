@@ -16,7 +16,7 @@ const getMovie = async (id: string): Promise<IMovie> => {
     ...(movie.runtime && { runtime: movie.runtime }),
     ...(movie.overview && { description: movie.overview }),
     genres: movie.genres?.map((genre) => genre.name) || [],
-    recommendations: recommendations || [],
+    recommendations,
   };
 };
 
