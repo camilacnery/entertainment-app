@@ -24,6 +24,12 @@
     margin-top: 1rem;
     color: $primary-color;
   }
+
+  @media screen and (max-width: 767px) {
+    nav {
+      display: none;
+    }
+  }
 }
 
 .user {
@@ -32,7 +38,15 @@
   justify-content: center;
   align-items: center;
 
-  span {
-    margin-right: 1rem;
+  @media screen and (max-width: 767px) {
+    span {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    span {
+      margin-right: 1rem;
+    }
   }
 }

@@ -14,8 +14,16 @@
   justify-content: center;
   align-items: center;
   min-height: 40vh;
-  width: 40%;
   border-radius: 5px;
   box-shadow: $shadow;
   background-color: $background-contrast-color;
+  padding: 2rem;
+
+  @media screen and (max-width: 1031px) {
+    width: 85%;
+  }
+
+  @media screen and (min-width: 1032px) {
+    width: 40%;
+  }
 }

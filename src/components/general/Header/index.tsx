@@ -10,7 +10,9 @@ const Header: FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.leftContent}>
-        <h1>The Catalog</h1>
+        <Link href="/">
+          <h1>The Catalog</h1>
+        </Link>
         <nav>
           <ul>
             <li>

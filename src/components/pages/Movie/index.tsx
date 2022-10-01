@@ -21,7 +21,7 @@ const MoviePage: FC<TProps> = ({ movie }) => {
         />
 
         <div className={styles.content}>
-          <div className={styles.movie}>
+          <div className={styles.movieContainer}>
             <Image loading="lazy" width={300} height={380} src={movie.posterUrl} alt={""} />
             <section className={styles.movieDetails}>
               <h1 className={styles.title}>{movie.title}</h1>

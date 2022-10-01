@@ -1,25 +1,47 @@
 .main {
   min-height: 100vh;
-  padding: 4rem 0 0 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width: 1031px) {
+    padding: 6rem 0 0 0;
+  }
+
+  @media screen and (min-width: 1032px) {
+    padding: 4rem 0 0 0;
+  }
 }
 
-.movie {
+.movieContainer {
   display: flex;
-  padding: 4rem;
-  margin: 4rem;
+  margin: 2rem;
   border-radius: 5px;
 
   img {
     border-radius: 5px;
+    align-self: center;
+  }
+
+  @media screen and (max-width: 1031px) {
+    flex-direction: column;
+    img {
+      max-height: 48vh;
+      width: auto;
+    }
+  }
+
+  @media screen and (min-width: 1032px) {
+    flex-direction: row;
+    margin: 4rem;
+    padding: 4rem;
   }
 }
 
 .movieDetails {
-  margin-left: 2rem;
+  @media screen and (min-width: 1032px) {
+    margin-left: 2rem;
+  }
 }
 
 .title {
@@ -27,6 +49,14 @@
   line-height: 1.15;
   font-size: 4rem;
   z-index: 2;
+
+  @media screen and (max-width: 1031px) {
+    font-size: 2.6rem;
+  }
+
+  @media screen and (min-width: 1032px) {
+    font-size: 4rem;
+  }
 }
 
 .content {
