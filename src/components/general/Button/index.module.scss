@@ -1,0 +1,10 @@
+@use '@/styles/constants' as *;
+
+.button {
+  background-color: $primary-color;
+  color: $primary-color-contrast;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: $border-radius;
+  cursor: pointer;
+}

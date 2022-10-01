@@ -1,10 +1,10 @@
 import { FC, useEffect } from "react";
-import Image from "next/image";
 import Meta from "@/components/general/Meta";
 import styles from "./index.module.scss";
 import { useUserContext } from "@/contexts/User";
 import { useRouter } from "next/router";
 import Avatar from "@/components/general/Avatar";
+import Button from "@/components/general/Button";
 
 const ProfilePage: FC = () => {
   const { profile, onLogout } = useUserContext();
@@ -28,7 +28,7 @@ const ProfilePage: FC = () => {
             <Avatar imageUrl={profile.imageUrl} />
             <h1>{profile.fullName}</h1>
             <p>{profile.email}</p>
-            <button onClick={onLogout}>Logout</button>
+            <Button onClick={onLogout}>Logout</Button>
           </>
         )}
       </section>

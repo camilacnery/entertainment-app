@@ -1,9 +1,12 @@
+@use '@/styles/constants' as *;
+
 .header {
   display: flex;
   padding: 3rem 2rem;
   align-items: center;
   justify-content: space-between;
-  background-color: #16213ecf;
+  background-color: $background-contrast-color;
+  box-shadow: $shadow;
   height: 8vh;
   z-index: 3;
   font-weight: bold;
@@ -19,7 +22,7 @@
 
   h1 {
     margin-top: 1rem;
-    color: #E94560;
+    color: $primary-color;
   }
 }
 

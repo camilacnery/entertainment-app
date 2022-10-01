@@ -6,7 +6,7 @@ import "@/styles/globals.scss";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <GoogleOAuthProvider clientId="628478310599-240khn8kh6qn2d5v4g7ptli5b3tl5sgc.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ""}>
       <UserContextProvider>
         <Header />
         <Component {...pageProps} />

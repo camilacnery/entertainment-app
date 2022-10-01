@@ -19,12 +19,12 @@ const LoginPage: FC = () => {
     <main className={styles.main}>
       <Meta title={`The Catalog | Login`} />
 
-      <div className={styles.content}>
+      <section className={styles.content}>
         {profile ? (
-          <section className={styles.login}>You are logged in, redirecting...</section>
+          <span>You are logged in, redirecting...</span>
         ) : (
-          <section className={styles.login}>
-            <h1>Login with</h1>
+          <>
+            <h1>Login with Google</h1>
             <GoogleLogin
               onSuccess={({ credential }: CredentialResponse) => {
                 if (!credential) return;
@@ -33,10 +33,11 @@ const LoginPage: FC = () => {
               onError={() => {
                 console.log("Login Failed");
               }}
+              useOneTap
             />
-          </section>
+          </>
         )}
-      </div>
+      </section>
     </main>
   );
 };

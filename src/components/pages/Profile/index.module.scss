@@ -1,7 +1,8 @@
+@use '@/styles/constants' as *;
+
 .main {
   min-height: 100vh;
   padding: 8rem 0 0 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,9 +13,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
   min-height: 40vh;
   width: 40%;
   border-radius: 5px;
-  background-color: #1b2746;
+  box-shadow: $shadow;
+  background-color: $background-contrast-color;
 }
