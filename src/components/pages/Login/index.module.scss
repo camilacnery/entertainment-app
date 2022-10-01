@@ -1,0 +1,18 @@
+.content {
+  height: 100vh;
+  display: flex;
+  color: #16213E;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 40%;
+  margin: auto;
+  border-radius: 5px;
+  height: 50vh;
+}
+

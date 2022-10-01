@@ -2,6 +2,7 @@
   display: flex;
   padding: 3rem 2rem;
   align-items: center;
+  justify-content: space-between;
   background-color: #16213ecf;
   height: 8vh;
   z-index: 3;
@@ -10,8 +11,25 @@
   top: 0;
   left: 0;
   right: 0;
+}
+
+.leftContent {
+  display: flex;
+  align-items: center;
 
   h1 {
+    margin-top: 1rem;
     color: #E94560;
+  }
+}
+
+.user {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    margin-right: 1rem;
   }
 }

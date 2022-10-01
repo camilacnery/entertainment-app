@@ -1,6 +1,6 @@
 import { buildApiMovieDetails } from "@/tests/builders/api/movie";
 import { buildApiMoviesList } from "@/tests/builders/api/rails";
-import { buildRailItems } from "@/tests/builders/rails";
+import { buildRailItems } from "@/tests/builders/domain/rails";
 import { mockSuccessResponse, server } from "@/tests/server";
 import { getMovie } from ".";
 

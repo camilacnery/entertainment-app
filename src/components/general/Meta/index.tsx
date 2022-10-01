@@ -3,14 +3,14 @@ import Head from "next/head";
 
 type TMetaProps = {
   title: string;
-  description: string;
+  description?: string;
 };
 
 const Meta: FC<TMetaProps> = ({ title, description }) => {
   return (
     <Head>
       <title>{title}</title>
-      <meta name="description" content={description} />
+      {description && <meta name="description" content={description} />}
       <link rel="icon" href="/favicon.ico" />
     </Head>
   );

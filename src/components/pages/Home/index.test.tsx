@@ -1,6 +1,6 @@
 import { screen, render, within } from "@testing-library/react";
 import { IRail } from "@/domain/Rail";
-import { buildRail } from "@/tests/builders/rails";
+import { buildRail } from "@/tests/builders/domain/rails";
 import Home from ".";
 
 const pageElements = {

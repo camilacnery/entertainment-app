@@ -1,5 +1,5 @@
 import { IMovie } from "@/domain/Movie";
-import { buildMovie } from "@/tests/builders/movie";
+import { buildMovie } from "@/tests/builders/domain/movie";
 import { screen, render, within } from "@testing-library/react";
 
 import Movie from ".";

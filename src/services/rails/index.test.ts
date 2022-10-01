@@ -1,5 +1,5 @@
 import { buildApiMoviesList } from "@/tests/builders/api/rails";
-import { buildRailItems } from "@/tests/builders/rails";
+import { buildRailItems } from "@/tests/builders/domain/rails";
 import { server, mockSuccessResponse } from "@/tests/server";
 import { getHomeRails, getMovieRecommendationRail } from ".";
 

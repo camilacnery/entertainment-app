@@ -6,20 +6,31 @@ exports[`Header renders component 1`] = `
     <header
       class="header"
     >
-      <h1>
-        The Catalog
-      </h1>
-      <nav>
-        <ul>
-          <li>
-            <a
-              href="/"
-            >
-              Home
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <div
+        class="leftContent"
+      >
+        <h1>
+          The Catalog
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <a
+          href="/login"
+        >
+          Login
+        </a>
+      </div>
     </header>
   </div>
 </body>
