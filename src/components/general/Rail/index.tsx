@@ -6,6 +6,9 @@ import styles from "./index.module.scss";
 
 const Rail: FC<IRail> = ({ name, items }) => {
   const key = `rail-heading-${name.replace(/\s/g, "")}`;
+
+  if (!items.length) return <></>;
+
   return (
     <section className={styles.rail}>
       <h1 id={key}>{name}</h1>

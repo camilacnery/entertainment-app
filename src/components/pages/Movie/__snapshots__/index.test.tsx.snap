@@ -25,7 +25,7 @@ exports[`Movie renders movie details with all content 1`] = `
         class="content"
       >
         <div
-          class="movie"
+          class="movieContainer"
         >
           <img
             alt=""

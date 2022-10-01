@@ -20,9 +20,7 @@ const HomePage: FC<TProps> = ({ homeRails }) => {
 
         <div className={styles.rails}>
           {homeRails.map((rail) => (
-            <Fragment key={`rail-${rail.name}`}>
-              {!!rail.items?.length && <Rail {...rail} />}
-            </Fragment>
+            <Rail key={`rail-${rail.name}`} {...rail} />
           ))}
         </div>
       </main>

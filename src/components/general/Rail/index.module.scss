@@ -1,3 +1,5 @@
+@use '@/styles/constants' as *;
+
 .rail {
   padding: 0 0 0 2em ;
   width: 100vw;
@@ -22,6 +24,9 @@
   img {
     max-height: 300px;
     border-radius: 5px;
+    min-width: 200px;
+    min-height: 100%;
+    background-color: $background-contrast-color;
   }
 
   &:hover {
