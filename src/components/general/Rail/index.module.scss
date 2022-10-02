@@ -18,15 +18,16 @@
 }
 
 .railListItem {
-  transition: transform 450ms;
   cursor: pointer;
-
+  transition: transform 450ms;
+  border-radius: $border-radius;
+  background-color: $background-contrast-color;
+  min-width: 200px;
+  
   img {
-    max-height: 300px;
     border-radius: 5px;
-    min-width: 200px;
+    max-height: 300px;
     min-height: 100%;
-    background-color: $background-contrast-color;
   }
 
   &:hover {

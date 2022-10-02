@@ -9,7 +9,7 @@ type TBanner = {
 const Banner: FC<TBanner> = ({ imageUrl }) => {
   return (
     <div className={styles.banner}>
-      {imageUrl && <Image src={imageUrl} alt={""} width={1024} height={768} />}
+      {imageUrl && <Image src={imageUrl} alt={""} width={1024} height={768} priority />}
     </div>
   );
 };

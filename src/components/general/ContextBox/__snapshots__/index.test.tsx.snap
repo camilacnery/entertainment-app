@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContextBox renders component 1`] = `
+<body>
+  <div>
+    <section
+      class="content"
+    >
+      <div>
+        Test
+      </div>
+    </section>
+  </div>
+</body>
+`;
