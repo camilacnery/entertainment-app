@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Page renders profile details 1`] = `
+<body>
+  <div>
+    <div
+      class="banner"
+    />
+    <main
+      class="main"
+    >
+      <div
+        class="content"
+      >
+        <section
+          class="content"
+        >
+          <img
+            alt=""
+            class="avatar"
+            data-nimg="future"
+            decoding="async"
+            height="100"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Ftest.picture&w=256&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Ftest.picture&w=128&q=75 1x, /_next/image?url=https%3A%2F%2Ftest.picture&w=256&q=75 2x"
+            style="color: transparent;"
+            width="100"
+          />
+          <h1>
+            Test User
+          </h1>
+          <p>
+            test@example.com
+          </p>
+          <button
+            class="button"
+          >
+            Logout
+          </button>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+`;
