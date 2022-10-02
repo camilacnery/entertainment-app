@@ -20,7 +20,7 @@ const ProfilePage: FC = () => {
     <Layout meta={{ title: `The Catalog | Profile` }}>
       <ContentBox>
         {!profile ? (
-          <span>You need to be logged in to view this page, redirecting...</span>
+          <h1>You need to be logged in to view this page, redirecting...</h1>
         ) : (
           <>
             <Avatar imageUrl={profile.imageUrl} />

@@ -20,14 +20,16 @@ const getHomeRails = async (): Promise<IRail[]> => {
   const homeRails: IRail[] = [];
 
   for (const rail of rails) {
-    const contentList = await tmdbClient.request<ITMDBList>(rail.path, rail.filter);
+    try {
+      const contentList = await tmdbClient.request<ITMDBList>(rail.path, rail.filter);
 
-    if (contentList.results?.length) {
-      homeRails.push({
-        name: rail.name,
-        items: contentList.results.map(itemMapper),
-      });
-    }
+      if (contentList.results?.length) {
+        homeRails.push({
+          name: rail.name,
+          items: contentList.results.map(itemMapper),
+        });
+      }
+    } catch {}
   }
 
   return homeRails;

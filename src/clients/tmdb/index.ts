@@ -7,8 +7,14 @@ const request = async <T>(path: string, filter?: string): Promise<T> => {
 
   if (filter) params += `&${filter}`;
 
-  const response = await fetch(`${url}?${params}`);
-  return (await response.json()) as T;
+  const responseRaw = await fetch(`${url}?${params}`);
+  const response = await responseRaw.json();
+
+  if (response.success === false) {
+    throw new Error(response.status_message);
+  }
+
+  return response as T;
 };
 
 const buildImageUrl = (path: string) => {

@@ -19,7 +19,7 @@ const LoginPage: FC = () => {
     <Layout meta={{ title: `The Catalog | Login` }}>
       <ContentBox>
         {profile ? (
-          <span>You are logged in, redirecting...</span>
+          <h1>You are logged in, redirecting...</h1>
         ) : (
           <>
             <h1>Login with Google</h1>

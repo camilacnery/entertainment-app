@@ -19,7 +19,7 @@ const Layout: FC<TLayout> = ({ meta, backgroundUrl, children }) => {
       <main className={styles.main}>
         <Head>
           <title>{meta.title}</title>
-          {meta.description && <meta name="description" content={meta.description} />}
+          {meta?.description && <meta name="description" content={meta.description} />}
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <div className={styles.content}>{children}</div>
