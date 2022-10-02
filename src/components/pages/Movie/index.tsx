@@ -28,7 +28,7 @@ const MoviePage: FC<TProps> = ({ movie }) => {
           <p>{movie.description}</p>
         </section>
       </div>
-      <Rail name="Similar movies" items={movie.recommendations} />
+      <Rail name="Recommendations" items={movie.recommendations} />
     </Layout>
   );
 };

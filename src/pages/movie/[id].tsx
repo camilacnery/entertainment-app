@@ -1,8 +1,8 @@
 import type { GetStaticProps, NextPage } from "next";
-import MoviePage from "@/components/pages/Movie";
 import { IMovie } from "@/domain/Movie";
-import { getMovie } from "@/services/movie";
 import { ErrorStatus } from "@/domain/Error";
+import { getMovie } from "@/services/movie";
+import MoviePage from "@/components/pages/Movie";
 import ErrorPage from "@/components/pages/Error";
 
 const Movie: NextPage<{ movie: IMovie; errorStatus: ErrorStatus }> = (props) => {
@@ -16,7 +16,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const id = (context?.params?.id as string) || "";
     const movie = await getMovie(id);
 
-    console.log("aquii", movie);
     return {
       props: { movie },
     };

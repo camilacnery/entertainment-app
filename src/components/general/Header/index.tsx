@@ -2,9 +2,9 @@ import { FC } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { useUserContext } from "@/contexts/User";
-import Avatar from "../Avatar";
+import Avatar from "@/components/general/Avatar";
+import Button from "@/components/general/Button";
 import styles from "./index.module.scss";
-import Button from "../Button";
 
 const Header: FC = () => {
   const { profile } = useUserContext();

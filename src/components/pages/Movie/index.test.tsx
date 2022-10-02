@@ -29,7 +29,7 @@ describe("Movie", () => {
     const { baseElement } = renderMovie(movie);
 
     // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
-    const recommendations = pageElements.rail.list("Similar movies")!;
+    const recommendations = pageElements.rail.list("Recommendations")!;
 
     expect(baseElement).toMatchSnapshot();
 

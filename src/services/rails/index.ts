@@ -1,7 +1,7 @@
 import { IRail, IRailItem } from "@/domain/Rail";
 import tmdbClient, { ITMDBList } from "@/clients/tmdb";
 
-const itemMapper = (result: ITMDBList["results"][0]) => ({
+const buildRailItem = (result: ITMDBList["results"][0]) => ({
   id: result.id,
   posterUrl: tmdbClient.buildImageUrl(result.poster_path),
   backdropUrl: tmdbClient.buildImageUrl(result.backdrop_path),

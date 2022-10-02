@@ -25,6 +25,7 @@ describe("Movie Service", () => {
     genres: ["Drama", "Crime"],
     recommendations: buildRailItems({ size: 5 }),
   };
+
   it("returns movie in the application domain", async () => {
     server.use(
       mockSuccessResponse(MOVIE_URL, buildApiMovieDetails()),

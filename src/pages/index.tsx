@@ -11,7 +11,7 @@ const Home: NextPage<{ homeRails: IRail[]; errorStatus: ErrorStatus }> = (props)
   return <HomePage {...props} />;
 };
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   try {
     const homeRails = await getHomeRails();
 
@@ -24,6 +24,6 @@ export async function getStaticProps() {
       props: { errorStatus: 500, revalidate: 60 },
     };
   }
-}
+};
 
 export default Home;

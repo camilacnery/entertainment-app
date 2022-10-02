@@ -63,12 +63,12 @@ exports[`Movie renders movie details with all content 1`] = `
           class="rail"
         >
           <h1
-            id="rail-heading-Similarmovies"
+            id="rail-heading-Recommendations"
           >
-            Similar movies
+            Recommendations
           </h1>
           <ul
-            aria-labelledby="rail-heading-Similarmovies"
+            aria-labelledby="rail-heading-Recommendations"
             class="railList"
           >
             <li
