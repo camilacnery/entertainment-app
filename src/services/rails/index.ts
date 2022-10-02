@@ -1,12 +1,17 @@
 import { IRail, IRailItem } from "@/domain/Rail";
 import tmdbClient, { ITMDBList } from "@/clients/tmdb";
 
-const buildRailItem = (result: ITMDBList["results"][0]) => ({
-  id: result.id,
-  posterUrl: tmdbClient.buildImageUrl(result.poster_path),
-  backdropUrl: tmdbClient.buildImageUrl(result.backdrop_path),
-  title: result.name || result.title,
-});
+const buildRailItem = (result: ITMDBList["results"][0]) => {
+  const posterUrl = tmdbClient.buildImageUrl(result.poster_path);
+  const backdropUrl = tmdbClient.buildImageUrl(result.backdrop_path);
+
+  return {
+    id: result.id,
+    title: result.name || result.title,
+    ...(posterUrl && { posterUrl }),
+    ...(backdropUrl && { backdropUrl }),
+  };
+};
 
 const getHomeRails = async (): Promise<IRail[]> => {
   const rails = [

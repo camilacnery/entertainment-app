@@ -1,8 +1,8 @@
 import { IRailItem } from "./Rail";
 
 export interface IMovie {
-  posterUrl: string;
-  backdropUrl: string;
+  posterUrl?: string;
+  backdropUrl?: string;
   title: string;
   originalTitle?: string;
   releaseDate?: string;

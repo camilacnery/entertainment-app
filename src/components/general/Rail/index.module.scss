@@ -18,13 +18,17 @@
 }
 
 .railListItem {
+  position: relative;
   cursor: pointer;
   transition: transform 450ms;
   border-radius: $border-radius;
-  background-color: $background-contrast-color;
+  background-color: $background-box-color;
   min-width: 200px;
+  min-height: 300px;
   
   img {
+    z-index: 3;
+    position: relative;
     border-radius: 5px;
     max-height: 300px;
     min-height: 100%;
@@ -33,4 +37,14 @@
   &:hover {
     transform: scale(1.1);
   }
+}
+
+.railListItemTitle {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.6rem;
 }

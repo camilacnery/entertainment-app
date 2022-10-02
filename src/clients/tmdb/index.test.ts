@@ -76,5 +76,11 @@ describe("TMDB Client", () => {
 
       expect(imageUrl).toEqual("https://image.tmdb.org/t/p/original/image/path");
     });
+
+    it("returns undefined when path is not provided", () => {
+      const imageUrl = tmdbClient.buildImageUrl();
+
+      expect(imageUrl).toBeUndefined();
+    });
   });
 });

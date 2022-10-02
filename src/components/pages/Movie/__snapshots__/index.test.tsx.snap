@@ -74,13 +74,18 @@ exports[`Movie renders movie details with all content 1`] = `
             <li
               class="railListItem"
             >
+              <span
+                class="railListItemTitle"
+              >
+                Schindler's List
+              </span>
               <img
                 alt="Schindler's List"
                 data-nimg="future"
                 decoding="async"
-                height="280"
+                height="300"
                 loading="lazy"
-                src="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FsF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg&w=640&q=75"
+                src="http://localhost/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FsF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg&w=640&q=75"
                 srcset="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FsF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FsF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg&w=640&q=75 2x"
                 style="color: transparent;"
                 width="200"
@@ -89,13 +94,18 @@ exports[`Movie renders movie details with all content 1`] = `
             <li
               class="railListItem"
             >
+              <span
+                class="railListItemTitle"
+              >
+                The Godfather
+              </span>
               <img
                 alt="The Godfather"
                 data-nimg="future"
                 decoding="async"
-                height="280"
+                height="300"
                 loading="lazy"
-                src="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F3bhkrj58Vtu7enYsRolD1fZdja1.jpg&w=640&q=75"
+                src="http://localhost/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F3bhkrj58Vtu7enYsRolD1fZdja1.jpg&w=640&q=75"
                 srcset="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F3bhkrj58Vtu7enYsRolD1fZdja1.jpg&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F3bhkrj58Vtu7enYsRolD1fZdja1.jpg&w=640&q=75 2x"
                 style="color: transparent;"
                 width="200"
@@ -104,13 +114,18 @@ exports[`Movie renders movie details with all content 1`] = `
             <li
               class="railListItem"
             >
+              <span
+                class="railListItemTitle"
+              >
+                Pulp Fiction
+              </span>
               <img
                 alt="Pulp Fiction"
                 data-nimg="future"
                 decoding="async"
-                height="280"
+                height="300"
                 loading="lazy"
-                src="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FfIE3lAGcZDV1G6XM5KmuWnNsPp1.jpg&w=640&q=75"
+                src="http://localhost/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FfIE3lAGcZDV1G6XM5KmuWnNsPp1.jpg&w=640&q=75"
                 srcset="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FfIE3lAGcZDV1G6XM5KmuWnNsPp1.jpg&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FfIE3lAGcZDV1G6XM5KmuWnNsPp1.jpg&w=640&q=75 2x"
                 style="color: transparent;"
                 width="200"
@@ -119,13 +134,18 @@ exports[`Movie renders movie details with all content 1`] = `
             <li
               class="railListItem"
             >
+              <span
+                class="railListItemTitle"
+              >
+                Forrest Gump
+              </span>
               <img
                 alt="Forrest Gump"
                 data-nimg="future"
                 decoding="async"
-                height="280"
+                height="300"
                 loading="lazy"
-                src="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FsaHP97rTPS5eLmrLQEcANmKrsFl.jpg&w=640&q=75"
+                src="http://localhost/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FsaHP97rTPS5eLmrLQEcANmKrsFl.jpg&w=640&q=75"
                 srcset="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FsaHP97rTPS5eLmrLQEcANmKrsFl.jpg&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2FsaHP97rTPS5eLmrLQEcANmKrsFl.jpg&w=640&q=75 2x"
                 style="color: transparent;"
                 width="200"
@@ -134,13 +154,18 @@ exports[`Movie renders movie details with all content 1`] = `
             <li
               class="railListItem"
             >
+              <span
+                class="railListItemTitle"
+              >
+                Dilwale Dulhania Le Jayenge
+              </span>
               <img
                 alt="Dilwale Dulhania Le Jayenge"
                 data-nimg="future"
                 decoding="async"
-                height="280"
+                height="300"
                 loading="lazy"
-                src="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F2CAL2433ZeIihfX1Hb2139CX0pW.jpg&w=640&q=75"
+                src="http://localhost/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F2CAL2433ZeIihfX1Hb2139CX0pW.jpg&w=640&q=75"
                 srcset="/_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F2CAL2433ZeIihfX1Hb2139CX0pW.jpg&w=256&q=75 1x, /_next/image?url=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F2CAL2433ZeIihfX1Hb2139CX0pW.jpg&w=640&q=75 2x"
                 style="color: transparent;"
                 width="200"

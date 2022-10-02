@@ -10,6 +10,12 @@ type TProps = {
 };
 
 const MoviePage: FC<TProps> = ({ movie }) => {
+  const info: string[] = [];
+
+  if (movie.releaseDate) info.push(movie.releaseDate);
+  if (movie.genres?.length) info.push(movie.genres.join(", "));
+  if (movie.runtime) info.push(`${movie.runtime}min`);
+
   return (
     <Layout
       meta={{
@@ -19,10 +25,12 @@ const MoviePage: FC<TProps> = ({ movie }) => {
       backgroundUrl={movie.backdropUrl}
     >
       <div className={styles.content}>
-        <Image loading="lazy" width={300} height={380} src={movie.posterUrl} alt={""} />
+        {movie.posterUrl && (
+          <Image loading="lazy" width={300} height={380} src={movie.posterUrl} alt={""} />
+        )}
         <section className={styles.movieDetails}>
           <h1 className={styles.title}>{movie.title}</h1>
-          <p>{`${movie.releaseDate} • ${movie.genres.join(", ")} • ${movie.runtime}min`}</p>
+          <p>{info.join(" • ")}</p>
           <p>{movie.tagline}</p>
           <h2>Overview</h2>
           <p>{movie.description}</p>

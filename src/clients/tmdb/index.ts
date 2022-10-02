@@ -20,7 +20,9 @@ const request = async <T>(path: string, params: TParams = {}): Promise<T> => {
   return response as T;
 };
 
-const buildImageUrl = (path: string) => {
+const buildImageUrl = (path?: string) => {
+  if (!path) return;
+
   return `${IMAGE_PATH}${path}`;
 };
 

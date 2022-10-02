@@ -4,7 +4,9 @@
   background-color: $primary-color;
   color: $primary-color-contrast;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1.2rem;
   border-radius: $border-radius;
+  font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
 }
