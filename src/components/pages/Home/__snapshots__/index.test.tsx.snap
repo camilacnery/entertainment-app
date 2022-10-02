@@ -22,7 +22,7 @@ exports[`Home renders home with multiple rails 1`] = `
       class="main"
     >
       <div
-        class="rails"
+        class="content"
       >
         <section
           class="rail"

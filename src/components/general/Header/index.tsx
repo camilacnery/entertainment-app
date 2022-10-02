@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useUserContext } from "@/contexts/User";
 import Avatar from "../Avatar";
 import styles from "./index.module.scss";
+import Button from "../Button";
 
 const Header: FC = () => {
   const { profile } = useUserContext();
@@ -31,7 +32,9 @@ const Header: FC = () => {
             </div>
           </Link>
         ) : (
-          <Link href="/login">Login</Link>
+          <Link href="/login">
+            <Button>Login</Button>
+          </Link>
         )}
       </div>
     </header>

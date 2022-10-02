@@ -4,11 +4,16 @@
   opacity: 0.5;
   z-index: 1;
   position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #16213e;
+  background-image: linear-gradient(43deg, #16213e 0%, #0f3460 30%, #533483 66%, #e94560 100%);
+
 
   & img {
     object-fit: cover;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
   }
 
   &:before,

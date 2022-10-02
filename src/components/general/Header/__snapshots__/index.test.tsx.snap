@@ -25,11 +25,11 @@ exports[`Header renders component 1`] = `
         </nav>
       </div>
       <div>
-        <a
-          href="/login"
+        <button
+          class="button"
         >
           Login
-        </a>
+        </button>
       </div>
     </header>
   </div>

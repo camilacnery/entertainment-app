@@ -1,9 +1,9 @@
 import { FC, useEffect } from "react";
-import { GoogleLogin, CredentialResponse } from "@react-oauth/google";
-import Meta from "@/components/general/Meta";
-import styles from "./index.module.scss";
-import { useUserContext } from "@/contexts/User";
 import { useRouter } from "next/router";
+import { GoogleLogin, CredentialResponse } from "@react-oauth/google";
+import { useUserContext } from "@/contexts/User";
+import Layout from "@/components/general/Layout";
+import ContentBox from "@/components/general/ContextBox";
 
 const LoginPage: FC = () => {
   const { profile, onSuccessLogin } = useUserContext();
@@ -16,10 +16,8 @@ const LoginPage: FC = () => {
   }, [profile, router]);
 
   return (
-    <main className={styles.main}>
-      <Meta title={`The Catalog | Login`} />
-
-      <section className={styles.content}>
+    <Layout meta={{ title: `The Catalog | Login` }}>
+      <ContentBox>
         {profile ? (
           <span>You are logged in, redirecting...</span>
         ) : (
@@ -37,8 +35,8 @@ const LoginPage: FC = () => {
             />
           </>
         )}
-      </section>
-    </main>
+      </ContentBox>
+    </Layout>
   );
 };
 

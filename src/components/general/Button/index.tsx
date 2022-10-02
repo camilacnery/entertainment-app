@@ -2,7 +2,7 @@ import { FC, ReactNode } from "react";
 import styles from "./index.module.scss";
 
 type TButton = {
-  onClick: () => void;
+  onClick?: () => void;
   children: ReactNode;
 };
 
