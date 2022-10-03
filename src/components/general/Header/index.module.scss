@@ -27,6 +27,11 @@
   }
 
   @media screen and (max-width: 767px) {
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
+
     nav {
       display: none;
     }
