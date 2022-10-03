@@ -19,7 +19,7 @@ interface IDecodedUser {
   sub: string;
 }
 
-type TUserContext = {
+export type TUserContext = {
   profile?: IUserProfile;
   onSuccessLogin: (userJwt: string) => void;
   onLogout: () => void;

@@ -28,9 +28,6 @@ const LoginPage: FC = () => {
                 if (!credential) return;
                 onSuccessLogin(credential);
               }}
-              onError={() => {
-                console.log("Login Failed");
-              }}
               useOneTap
             />
           </>

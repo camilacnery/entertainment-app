@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Page renders login page 1`] = `
+<body>
+  <div>
+    <div
+      class="banner"
+    />
+    <main
+      class="main"
+    >
+      <div
+        class="content"
+      >
+        <section
+          class="content"
+        >
+          <h1>
+            Login with Google
+          </h1>
+          <button>
+            Mock login
+          </button>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+`;

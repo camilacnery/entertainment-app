@@ -1,6 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header renders component 1`] = `
+exports[`Header renders component when user is logged in 1`] = `
+<body>
+  <div>
+    <header
+      class="header"
+    >
+      <div
+        class="leftContent"
+      >
+        <h1>
+          The Catalog
+        </h1>
+        <nav>
+          <ul>
+            <li>
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <div
+          class="user"
+        >
+          <span>
+            Test
+          </span>
+          <img
+            alt=""
+            class="avatar"
+            data-nimg="future"
+            decoding="async"
+            height="40"
+            loading="lazy"
+            src="/_next/image?url=https%3A%2F%2Fimage.url&w=96&q=75"
+            srcset="/_next/image?url=https%3A%2F%2Fimage.url&w=48&q=75 1x, /_next/image?url=https%3A%2F%2Fimage.url&w=96&q=75 2x"
+            style="color: transparent;"
+            width="40"
+          />
+        </div>
+      </div>
+    </header>
+  </div>
+</body>
+`;
+
+exports[`Header renders component when user is logged out 1`] = `
 <body>
   <div>
     <header
