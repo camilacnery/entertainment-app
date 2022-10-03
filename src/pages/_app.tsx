@@ -4,6 +4,9 @@ import { UserContextProvider } from "@/contexts/User";
 import Header from "@/components/general/Header";
 import "@/styles/globals.scss";
 
+import "@fontsource/roboto";
+import "@fontsource/bebas-neue";
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <GoogleOAuthProvider clientId={process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID || ""}>
