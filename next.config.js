@@ -5,11 +5,6 @@ const nextConfig = {
   images: {
     domains: ["image.tmdb.org", "lh3.googleusercontent.com"],
   },
-  experimental: {
-    images: {
-      allowFutureImage: true,
-    },
-  },
 };
 
 module.exports = nextConfig;
